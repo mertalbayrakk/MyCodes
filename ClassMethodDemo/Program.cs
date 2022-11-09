@@ -13,15 +13,19 @@ customer2.Id = 22222;
 customer2.Tc = 987654321;
 
 Customer customer3 = new Customer();
-customer3.Name = "Mahmut";
+customer3.Name = "Leyla";
 customer3.Surname = "Yiğit";
 customer3.Id = 33333;
 customer3.Tc = 963852741;
 
 CustomerManager customerManager = new CustomerManager();
 
+Customer[] customers = { customer1, customer2, customer3 };
+
 customerManager.Listele(customer1, customer2, customer3);
 
 customerManager.Ekle(customer2);
 
 customerManager.Sil(customer3);
+
+customerManager.Listelettir(customers);

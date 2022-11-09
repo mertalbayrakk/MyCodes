@@ -8,7 +8,9 @@ using System.Xml.Serialization;
 namespace ClassMethodDemo
 {
     internal class CustomerManager
-    {
+    {   
+
+        //Params ile Listeleme.
         public void Listele(params Customer[] customers)
         {
 
@@ -18,6 +20,7 @@ namespace ClassMethodDemo
                 Console.WriteLine("Ad Soyadı:" + customer.Name + " " + customer.Surname + "\n" + "Id:" + customer.Id + "\n" + "Tc:" + customer.Tc + "\n" + "-------------");
 
         }
+
 
         public void Ekle(Customer customer)
         {
@@ -29,14 +32,28 @@ namespace ClassMethodDemo
         }
 
 
-        public void Sil(Customer customer)
+       public void Sil(Customer customer)
         {
 
-            Console.WriteLine(customer.Name + " " + customer.Surname + ": " + "Dikkat! Müşteri Silindi!");
+           Console.WriteLine(customer.Name + " " + customer.Surname + ": " + "Dikkat! Müşteri Silindi!");
 
 
 
         }
+
+
+
+        // Params olmadan listeleme.
+        public void Listelettir(Customer[] customers)
+        {
+
+            Console.WriteLine("-------------");
+            foreach (Customer customer in customers)
+                Console.WriteLine("Ad Soyadı:" + customer.Name + " " + customer.Surname + "\n" + "Id:" + customer.Id + "\n" + "Tc:" + customer.Tc + "\n" + "-------------");
+
+
+        }
+
 
     }
 }
